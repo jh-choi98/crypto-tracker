@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const Container = styled.div`
-  max-width: 550px;
+  max-width: 480px;
   margin: 30px auto;
 `;
 const Header = styled.div`
@@ -26,7 +26,7 @@ const Loader = styled.h1`
 `;
 const Search = styled.input`
   margin-bottom: 60px;
-  width: 550px;
+  width: 480px;
   padding: 15px;
   border: none;
   font-size: 18px;

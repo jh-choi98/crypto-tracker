@@ -13,7 +13,7 @@ import Price from "../components/Price";
 import Chart from "../components/Chart";
 
 const Container = styled.div`
-  max-width: 550px;
+  max-width: 480px;
   margin: 30px auto;
 `;
 const Header = styled.div`
@@ -71,7 +71,7 @@ const Tab = styled.span<{ isActive: boolean }>`
     display: block;
     color: ${(props) =>
       props.isActive ? props.theme.accentColor : props.theme.textColor};
-    padding: 15px 100px;
+    padding: 15px 75px;
   }
 `;
 
