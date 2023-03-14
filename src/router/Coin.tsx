@@ -169,11 +169,11 @@ function Coin() {
             </MainItem>
             <MainItem>
               <span>Price</span>
-              <span>{`$ ${priceData?.quotes.USD?.price.toFixed(4)} US`}</span>
+              <span>{`$ ${priceData?.quotes?.USD?.price.toFixed(4)} US`}</span>
             </MainItem>
             <MainItem>
               <span>First Date</span>
-              <span>{infoData?.first_data_at.slice(0, 10)}</span>
+              <span>{infoData?.first_data_at?.slice(0, 10)}</span>
             </MainItem>
           </Main>
           <Description>{infoData?.description}</Description>
@@ -201,7 +201,7 @@ function Coin() {
 
           <Switch>
             <Route path="/:coinId/price">
-              <Price priceUSD={priceData?.quotes.USD.price as number} />
+              <Price priceUSD={priceData?.quotes?.USD?.price as number} />
             </Route>
             <Route path="/:coinId/chart">
               <Chart />
