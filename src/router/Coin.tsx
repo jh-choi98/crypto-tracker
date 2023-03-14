@@ -169,7 +169,7 @@ function Coin() {
             </MainItem>
             <MainItem>
               <span>Price</span>
-              <span>{`$ ${priceData?.quotes.USD.price.toFixed(4)} US`}</span>
+              <span>{`$ ${priceData?.quotes.USD?.price.toFixed(4)} US`}</span>
             </MainItem>
             <MainItem>
               <span>First Date</span>
