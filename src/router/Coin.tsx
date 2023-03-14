@@ -139,8 +139,8 @@ interface IPriceData {
 function Coin() {
   const { coinId } = useParams<IRouteParams>();
   const { state } = useLocation<IRouteState>();
-  const priceMatch = useRouteMatch(":coinId/price");
-  const chartMatch = useRouteMatch(":coinId/chart");
+  const priceMatch = useRouteMatch("/crypto-tracker/:coinId/price");
+  const chartMatch = useRouteMatch("/crypto-tracker/:coinId/chart");
   const { isLoading: loadingInfo, data: infoData } = useQuery<IInfoData>(
     ["info", coinId],
     () => fetchCoinInfo(coinId)
@@ -194,20 +194,20 @@ function Coin() {
 
           <TabContainer>
             <Tab isActive={priceMatch !== null}>
-              <Link to={`${coinId}/price`}>PRICE</Link>
+              <Link to={`/crypto-tracker/${coinId}/price`}>PRICE</Link>
             </Tab>
             <Tab isActive={chartMatch !== null}>
-              <Link to={`${coinId}/chart`}>CHART</Link>
+              <Link to={`/crypto-tracker/${coinId}/chart`}>CHART</Link>
             </Tab>
           </TabContainer>
 
           <Switch>
-            <Route path=":coinId/price">
+            <Route path="/crypto-tracker/:coinId/price">
               <Price
                 priceUSD={(priceData?.quotes?.USD?.price as number) ?? 0}
               />
             </Route>
-            <Route path=":coinId/chart">
+            <Route path="/crypto-tracker/:coinId/chart">
               <Chart />
             </Route>
           </Switch>
