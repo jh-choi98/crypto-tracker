@@ -194,20 +194,20 @@ function Coin() {
 
           <TabContainer>
             <Tab isActive={priceMatch !== null}>
-              <Link to={`/crypto-tracker/${coinId}/price`}>PRICE</Link>
+              <Link to={`${coinId}/price`}>PRICE</Link>
             </Tab>
             <Tab isActive={chartMatch !== null}>
-              <Link to={`/crypto-tracker/${coinId}/chart`}>CHART</Link>
+              <Link to={`${coinId}/chart`}>CHART</Link>
             </Tab>
           </TabContainer>
 
           <Switch>
-            <Route path="/crypto-tracker/:coinId/price">
+            <Route path=":coinId/price">
               <Price
                 priceUSD={(priceData?.quotes?.USD?.price as number) ?? 0}
               />
             </Route>
-            <Route path="/crypto-tracker/:coinId/chart">
+            <Route path=":coinId/chart">
               <Chart />
             </Route>
           </Switch>
