@@ -23,7 +23,7 @@ export function fetchCoinHistory(coinId: string) {
   ).then((response) => response.json());
 }
 
-export function fetchExchangeCad() {
+export function fetchCurrencyExchange(currency: string) {
   const options = {
     method: "GET",
     headers: {
@@ -33,7 +33,7 @@ export function fetchExchangeCad() {
   };
 
   return fetch(
-    "https://currency-exchange.p.rapidapi.com/exchange?from=USD&to=CAD&q=1.0",
+    `https://currency-exchange.p.rapidapi.com/exchange?from=USD&to=${currency}&q=1.0`,
     options
   )
     .then((response) => response.json())

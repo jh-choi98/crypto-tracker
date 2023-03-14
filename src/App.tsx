@@ -18,7 +18,8 @@ const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
   }
-  input:focus {
+  input:focus,
+  select:focus {
     outline: none;
   }
 `;
