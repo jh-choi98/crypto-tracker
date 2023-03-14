@@ -1,3 +1,4 @@
+import React from "react";
 import Router from "./Router";
 import { createGlobalStyle } from "styled-components";
 import reset from "react-style-reset/string";
