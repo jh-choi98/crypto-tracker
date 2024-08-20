@@ -19,6 +19,7 @@ const OverviewItem = styled.div`
   margin: 30px 0px;
   padding: 10px 0px;
   border-radius: 15px;
+  color: white;
   span {
     font-size: 22px;
   }

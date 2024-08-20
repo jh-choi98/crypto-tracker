@@ -11,6 +11,7 @@ import { useQuery } from "react-query";
 import styled from "styled-components";
 import Price from "../components/Price";
 import Chart from "../components/Chart";
+import { Helmet } from "react-helmet";
 
 const Container = styled.div`
   max-width: 480px;
@@ -34,6 +35,7 @@ const Main = styled.div`
   margin: 30px 0px;
   padding: 5px 0px;
   border-radius: 15px;
+  color: white;
 `;
 const Loader = styled.h1`
   text-align: center;
@@ -69,8 +71,7 @@ const Tab = styled.span<{ isActive: boolean }>`
   background-color: rgba(0, 0, 0, 0.5);
   a {
     display: block;
-    color: ${(props) =>
-      props.isActive ? props.theme.accentColor : props.theme.textColor};
+    color: ${(props) => (props.isActive ? props.theme.accentColor : "white")};
     padding: 15px 75px;
   }
 `;
@@ -153,6 +154,11 @@ function Coin() {
 
   return (
     <Container>
+      <Helmet>
+        <title>
+          {state?.name ? state.name : loading ? "Loading..." : infoData?.name}
+        </title>
+      </Helmet>
       <Header>
         <Title>
           {state?.name ? state.name : loading ? "Loading..." : infoData?.name}

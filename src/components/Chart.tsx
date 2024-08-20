@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import { fetchCoinHistory } from "../api";
 import ApexChart from "react-apexcharts";
+import { useRecoilValue } from "recoil";
+import { isDarkAtom } from "../atoms";
 
 interface IRouteParams {
   coinId: string;
@@ -28,6 +30,7 @@ function Chart() {
   const { isLoading, data } = useQuery<IHistory[]>(["chart", coinId], () =>
     fetchCoinHistory(coinId)
   );
+  const isDark = useRecoilValue(isDarkAtom);
   return (
     <div>
       {isLoading ? (
@@ -79,7 +82,7 @@ function Chart() {
               categories: data?.map((price) => price.time_close) ?? [],
               labels: {
                 style: {
-                  colors: "white",
+                  colors: isDark ? "white" : "black",
                 },
               },
             },
@@ -89,7 +92,7 @@ function Chart() {
               },
               labels: {
                 style: {
-                  colors: "white",
+                  colors: isDark ? "white" : "black",
                 },
               },
             },
@@ -97,7 +100,7 @@ function Chart() {
               y: {
                 formatter: (value) => `$ ${value.toFixed(2)}`,
               },
-              theme: "dark",
+              theme: isDark ? "dark" : "white",
             },
             plotOptions: {
               candlestick: {

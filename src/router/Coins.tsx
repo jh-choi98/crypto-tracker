@@ -3,6 +3,7 @@ import { useQuery } from "react-query";
 import { fetchCoins } from "../api";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 
 const Container = styled.div`
   max-width: 480px;
@@ -71,6 +72,7 @@ interface ICoin {
   symbol: string;
   type: string;
 }
+
 function Coins() {
   const { isLoading, data } = useQuery<ICoin[]>("allCoins", fetchCoins);
   const [userInput, setUserInput] = useState("");
@@ -90,6 +92,9 @@ function Coins() {
     event.preventDefault();
   return (
     <Container>
+      <Helmet>
+        <title>Coins</title>
+      </Helmet>
       <Header>
         <Title>Coins</Title>
       </Header>
@@ -113,10 +118,9 @@ function Coins() {
                     state: {
                       name: coin.name,
                     },
-                  }}
-                >
+                  }}>
                   <Img
-                    src={`https://coinicons-api.vercel.app/api/icon/${coin.symbol.toLowerCase()}`}
+                    src={`https://cryptoicon-api.pages.dev/api/icon/${coin.symbol.toLowerCase()}`}
                     alt={coin.id}
                   />
                   {coin.name} &rarr;
