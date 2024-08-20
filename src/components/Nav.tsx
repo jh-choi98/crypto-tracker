@@ -5,7 +5,7 @@ import { isDarkAtom } from "../atoms";
 const Container = styled.div`
   height: 5vh;
   display: flex;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
 `;
 
