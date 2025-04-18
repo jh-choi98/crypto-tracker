@@ -1,5 +1,10 @@
 <!-- --------------------------------------------------------------------- -->
 <h1 align="center">📈 Crypto Tracker</h1>
+
+<p align="center">
+  <img src="https://github.com/jh-choi98/crypto-tracker/actions/workflows/react.yml/badge.svg" alt="React CI" />
+</p>
+
 <p align="center">
   Real‑time cryptocurrency dashboard built with React + TypeScript
 </p>
