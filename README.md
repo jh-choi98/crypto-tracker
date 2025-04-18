@@ -29,14 +29,14 @@
 
 ## Features
 
-|                      | Description                                                         |
-| -------------------- | ------------------------------------------------------------------- |
-| 🔍 Coin Explorer     | Market‑cap‑sorted list with icons, symbols, and live prices         |
-| 📊 Detail View       | 24 h / 7 d OHLC & line charts, supply metrics, and price converters |
-| 💱 FX Converter      | RapidAPI currency exchange for instant USD ↔ KRW (or any fiat)      |
-| 🌗 Dark / Light Mode | Global theme toggle stored in Recoil atoms                          |
-| ⚡ Real‑time Fetch   | React‑Query + Suspense loaders and automatic refetch intervals      |
-| ✨ Responsiveness    | Mobile‑first layout using Styled‑Components                         |
+|                      | Description                                                          |
+| -------------------- | -------------------------------------------------------------------- |
+| 🔍 Coin Explorer     | Market‑cap‑sorted list with icons, symbols, and live prices          |
+| 📊 Detail View       | 24 h / 7 d OHLC & line charts, supply metrics, and price converters  |
+| 💱 FX Converter      | RapidAPI currency exchange for instant USD ↔ KRW (or any currencies) |
+| 🌗 Dark / Light Mode | Global theme toggle stored in Recoil atoms                           |
+| ⚡ Real‑time Fetch   | React‑Query + Suspense loaders and automatic refetch intervals       |
+| ✨ Responsiveness    | Mobile‑first layout using Styled‑Components                          |
 
 ---
 
