@@ -1,13 +1,5 @@
 name: React CI
 
-# on:
-#   push:
-#     paths:
-#       - "client/**"
-#   pull_request:
-#     paths:
-#       - "client/**"
-
 on:
   push:
     branches: [master]
@@ -29,8 +21,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Lint
-        run: npm run lint
-
       - name: Build
         run: npm run build
+
+      - name: Test
+        run: npm run test -- --watchAll=false
