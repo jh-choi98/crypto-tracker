@@ -61,7 +61,7 @@ function Price({ priceUSD }: IPriceProps) {
   };
   useEffect(() => {
     refetch();
-  }, [currency]);
+  }, [currency, refetch]);
   console.log(currency);
   console.log(data);
   return (
